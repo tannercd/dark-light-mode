@@ -1,6 +1,4 @@
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-# Dark & Light Transition
+# Dark & Light Mode
 
 I built this dark/light mode transition page to use and expand on in future projects.
 
