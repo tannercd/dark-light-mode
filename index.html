@@ -1,28 +1,29 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dark & Light Modes</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font awesome -->
-    <script src="https://kit.fontawesome.com/e03d7ac5cf.js" crossorigin="anonymous"></script>
+    <title>Dark & Light Theme</title>
   </head>
   <body> 
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-btn">About</a></li>
+        <li><a href="#" class="nav-btn">Products</a></li>
+        <li><a href="#" class="nav-btn">Contact</a></li>
+      </ul>
+    </nav>
     <div class="flex">
-      <label class="test">
+      <!-- Checkbox Hack ie using a label with for attribute to trigger checkbox:checked upon click -->
+      <label class="hack">
         <input id="cbox" type="checkbox"></input>
         <span id="mySpan" class="slide round"></span>
       </label>
-      <div class="page-weather">
-        <i id="myI" aria-hidden="true"></i>
-        <h1 id="main-header" class="msg"></h1>
-      </div>
     </div>
-  <div class="mock">
-    <h2>Mock Header</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequuntur quia velit? Natus fugiat sunt blanditiis nobis esse iusto cupiditate similique odit libero fuga nemo magni, minus nisi itaque perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, veritatis sint illo officiis nemo fuga in veniam tempore dolores molestiae vel totam laboriosam quidem cupiditate accusantium magnam aut nesciunt eaque repudiandae architecto itaque praesentium quos necessitatibus. Harum labore quaerat, sunt veniam, inventore velit nemo tenetur eos id dolores esse maxime!</p><br />
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati aut alias quidem animi atque et ipsum fugit sapiente dignissimos dolor, in, quisquam eaque. Voluptatem culpa illum, neque voluptas esse officiis veritatis voluptatibus repudiandae, quidem nihil laborum dolorum quibusdam adipisci, earum exercitationem? Placeat autem debitis consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, veritatis sint illo officiis nemo fuga in veniam tempore dolores molestiae vel totam laboriosam quidem cupiditate accusantium magnam aut nesciunt eaque repudiandae architecto itaque praesentium quos necessitatibus. Harum labore quaerat, sunt veniam, inventore velit nemo tenetur eos id dolores esse maxime!</p>
-  </div>
-  <script src="script.js" type="text/javascript"></script>
+    <div class="container">
+      <h2>Mock Header</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus consequuntur quia velit? Natus fugiat sunt blanditiis nobis esse iusto cupiditate similique odit libero fuga nemo magni, minus nisi itaque perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, veritatis sint illo officiis nemo fuga in veniam tempore dolores molestiae vel totam laboriosam quidem cupiditate accusantium magnam aut nesciunt eaque repudiandae architecto itaque praesentium quos necessitatibus. Harum labore quaerat, sunt veniam, inventore velit nemo tenetur eos id dolores esse maxime!</p><br />
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati aut alias quidem animi atque et ipsum fugit sapiente dignissimos dolor, in, quisquam eaque. Voluptatem culpa illum, neque voluptas esse officiis veritatis voluptatibus repudiandae, quidem nihil laborum dolorum quibusdam adipisci, earum exercitationem? Placeat autem debitis consequuntur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, veritatis sint illo officiis nemo fuga in veniam tempore dolores molestiae vel totam laboriosam quidem cupiditate accusantium magnam aut nesciunt eaque repudiandae architecto itaque praesentium quos necessitatibus. Harum labore quaerat, sunt veniam, inventore velit nemo tenetur eos id dolores esse maxime!</p>
+    </div>
   </body>
 </html>

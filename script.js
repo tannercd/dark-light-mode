@@ -1,31 +1,35 @@
-const message = document.getElementById("main-header");
 const mySpan = document.getElementById("mySpan");
 const myInput = document.getElementById("cbox");
-const weather = document.getElementById("myI");
+const navBtns = document.querySelectorAll(".nav-btn");
+console.log(navBtns);
 
-message.innerHTML = "Light Mode Active";
-message.style.color = "#000";
-weather.className = "fa fa-lightbulb-o";
-weather.classList.add("sun");
-
-mySpan.addEventListener("click", () => {
-  if (myInput.checked) {
-    document.body.style.background = "#FFF";
-    document.body.style.color = "#000";
-    message.innerHTML = "Light Mode Active";
-    message.style.color = "#000";
-    weather.className = "fa fa-lightbulb-o";
-    weather.style.color = "#F4D03F";
-    weather.style.fontSize = "2rem";
-    weather.style.padding = "10px";
-  } else {
-    document.body.style.background = "#111";
-    document.body.style.color = "#FFF";
-    message.innerHTML = "Dark Mode Active";
-    message.style.color = "#FFF";
-    weather.className = "fa fa-moon-o";
-    weather.style.fontSize = "2rem";
-    weather.style.color = "#FFF";
-    weather.style.padding = "10px";
-  }
-});
+window.onload = () => {
+  mySpan.addEventListener("click", () => {
+    console.log(myInput.checked);
+    if (myInput.checked) {
+      document.body.style.background = "#FFF";
+      document.body.style.color = "#000";
+      for (let i=0; i < navBtns.length; i++) {
+        navBtns[i].style.color = "#000";
+        navBtns[i].addEventListener("mouseover", () => {
+          navBtns[i].style.borderColor = "#000";
+        });
+        navBtns[i].addEventListener("mouseout", () => {
+          navBtns[i].style.borderColor = "transparent";
+        });
+      }
+    } else {
+      document.body.style.background = "hsl(0, 1%, 8%)";
+      for (let i=0; i < navBtns.length; i++) {
+        navBtns[i].style.color = "#FFF";
+        navBtns[i].addEventListener("mouseover", () => {
+          navBtns[i].style.borderColor = "#eee";
+        });
+        navBtns[i].addEventListener("mouseout", () => {
+          navBtns[i].style.borderColor = "transparent";
+        });
+      }
+      document.body.style.color = "#FFF"; 
+    }
+  });
+}

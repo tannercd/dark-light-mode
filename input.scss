@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+$fa-text: "Font Awesome 5 Free";
+$google-font-roboto-condensed: "Roboto Condensed", sans-serif;
+$sunColor: #F4D03F;
+$sunColorTwo: #F1C40F;
+$shadowOne: -1px 6px 25px -12px rgba(0,0,0,0.75);
+$shadowTwo: -1px 1px 25px -8px rgba(0,0,0,0.75);
+body {
+  background: #FFF;
+  transition: 0.3s ease-in-out;
+  nav {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    ul {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      li {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        a {
+          color: #000;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+        }
+        a:hover {
+          border-color: #000;
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .hack {
+    margin: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    width: 60px;
+    height: 34px;
+    input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    span {
+      width: 63px;
+    }
+    input:before {
+      position: absolute;
+      top: 7px;
+      left: 6px;
+      content: "";
+    }
+    .slide {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #ddd;
+      box-shadow: $shadowOne;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+    .slide:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      z-index: 999;
+    }
+    .slide:after {
+      position: absolute;
+      top: 8px;
+      right: 5px;
+      color: $sunColorTwo;
+      font-family: $fa-text;
+      vertical-align: middle;
+      font-weight: 900;
+      font-size: 1.1rem;
+      content: "\f186";
+      display: inline-block;
+      z-index: 1;
+    }
+    input:checked + .slide {
+      background: #222;
+      opacity: 0.8;
+    }
+    input:focus + .slide {
+      box-shadow: 0 0 1px #2196F3;
+    }
+    input:checked + .slide:before {
+      -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+      transform: translateX(30px);
+    }
+    .slide.round {
+      border-radius: 33px;
+    }
+    .slide.round:before {
+      border-radius: 50%;
+    }
+  }  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 3rem auto 1rem auto;
+  padding: 0 4rem 0 4rem;
+  h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}

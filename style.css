@@ -1,130 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-
-:root {
-  --font-awesome: "Font Awesome 5 Free";
-  --google-font-roboto-condensed: "Roboto Condensed", sans-serif;
-}
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 body {
-  color: #000;
+  background: #FFF;
+  transition: 0.3s ease-in-out;
 }
-
-.test {
-  display: inline-block;
-  position: relative;
-  width: 60px;
-  height: 34px;
+body nav {
+  margin-top: 2rem;
+  margin-left: 3rem;
 }
-
-.test input {
-  opacity: 0;
-  height: 0;
-  width: 0;
+body nav ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
-
-.test input:before {
-  position: absolute;
-  top: 7px;
-  left: 6px;
-  content: "";
-}
-
-.slide {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #eee;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slide:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-  z-index: 999;
-}
-
-.slide:after {
-  position: absolute;
-  top: 8px;
-  right: 5px;
-  font-family: var(--font-awesome);
-  vertical-align: middle;
-  font-weight: 900;
-  font-size: 1.1rem;
-  content: "\f186";
-  display: inline-block;
-  z-index: 1;
-}
-
-input:checked + .slide {
-  background: #222;
-  opacity: 0.8;
-}
-
-input:focus + .slide {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slide:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-.slide.round {
-  border-radius: 33px;
-}
-
-.slide.round:before {
-  border-radius: 50%;
-}
-
-.msg {
-  font-family: var(--google-font-roboto-condensed);
-  color: #000;
+body nav ul li {
   font-size: 1.5rem;
+  padding: 0 1rem;
 }
-
-.page-weather {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
+body nav ul li a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
-
-.sun {
-  font-size: 2rem;
-  color: #F4D03F;
-  padding: 10px;
-}
-
-.mock {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto 10px auto;
-  width: 50%;
-}
-
-.mock h2 {
-  font-size: 3.5rem;
-}
-
-.mock p {
-  font-size: 1.3rem;
-  line-height: 1.5;
+body nav ul li a:hover {
+  border-color: #000;
 }
 
 .flex {
@@ -132,3 +31,99 @@ input:checked + .slide:before {
   justify-content: space-between;
   align-items: center;
 }
+.flex .hack {
+  margin: 1rem;
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  width: 60px;
+  height: 34px;
+}
+.flex .hack input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.flex .hack span {
+  width: 63px;
+}
+.flex .hack input:before {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  content: "";
+}
+.flex .hack .slide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ddd;
+  box-shadow: -1px 6px 25px -12px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.flex .hack .slide:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 999;
+}
+.flex .hack .slide:after {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: #F1C40F;
+  font-family: "Font Awesome 5 Free";
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 1.1rem;
+  content: "";
+  display: inline-block;
+  z-index: 1;
+}
+.flex .hack input:checked + .slide {
+  background: #222;
+  opacity: 0.8;
+}
+.flex .hack input:focus + .slide {
+  box-shadow: 0 0 1px #2196F3;
+}
+.flex .hack input:checked + .slide:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+.flex .hack .slide.round {
+  border-radius: 33px;
+}
+.flex .hack .slide.round:before {
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 3rem auto 1rem auto;
+  padding: 0 4rem 0 4rem;
+}
+.container h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.container p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=style.css.map */
