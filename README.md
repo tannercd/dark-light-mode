@@ -1,15 +1,9 @@
 # Dark & Light Mode
 
-I built this dark/light mode transition page to use and expand on in future projects.
+I built this dark/light transition page to use and expand on in future projects.
 
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-1. Fork this repo
-2. Clone the repository with `git clone git@github.com:username/dark-light-mode.git`
-3. Open a code editor of your choosing and the newly cloned project to have access to the project files.
-3. Open the `index.html` file inside your favorite web browser and test out the dark/light modes!
+Head on over to CodePen and check out the project live @ [Dark and Light Mode](https://codepen.io/tannerdolby/pen/pogggVN)
 
 ## Built With
 
