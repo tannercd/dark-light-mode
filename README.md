@@ -1,5 +1,3 @@
-<img width="1273" alt="project preview image" src="https://user-images.githubusercontent.com/48612525/84360393-d66e4000-ab7e-11ea-915a-88e868bfd8cd.png">
-
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 # Dark & Light Transition
